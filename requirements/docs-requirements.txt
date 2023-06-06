@@ -1,0 +1,10 @@
+sphinx
+sphinx-rtd-theme
+lumache
+sphinx-toolbox
+sphinx-autopackagesummary
+myst_parser
+sphinxcontrib-mermaid
+sphinx_copybutton
+-r requirements.txt
+-r nox-requirements.txt
