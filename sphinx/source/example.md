@@ -9,7 +9,7 @@ sequenceDiagram
     Client->>Serveur: Connexion
     Caméra->>Serveur: Rééccupère le flux vidéo
     Serveur->>Client: Envoie le flux vidéo
-    Client->>Caméra: Réccupère le flux et le renvoir sur la page
+    Client->>Client: Réccupère le flux et le renvoir sur la page
 
 ```
 
