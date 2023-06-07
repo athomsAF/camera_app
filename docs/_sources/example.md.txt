@@ -19,7 +19,7 @@ Bug during the reload of the page, the flux is not reloaded.
 ## Explication of the code
 
 ```{eval-rst}
-.. autofunction:: noxfile.check_if_commited
+.. autofunction:: stream_socket_server.check_if_commited
 ```
 
 
