@@ -19,9 +19,8 @@ Bug during the reload of the page, the flux is not reloaded.
 ## Explication of the code
 
 ```{eval-rst}
-.. autofunction:: src.stream_socket_server.video_stream
+.. autofunction:: noxfile.check_if_commited
 ```
-test
 
 
 <!-- ```{code-block} python
