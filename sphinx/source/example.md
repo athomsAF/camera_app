@@ -16,6 +16,12 @@ sequenceDiagram
 Bug during the reload of the page, the flux is not reloaded.
 :::
 
+## Explication of the code
+
+```{eval-rst}
+.. autofunction:: stream_socket_server.video_stream
+```
+
 <!-- ```{code-block} python
 def check_if_commited() -> bool:
 """returns if the current branch is commited
@@ -44,32 +50,5 @@ We can also use automodule to auto-document a file
 
 Cela permet d'afficher le contenu de la manière suivante.
 
-```{eval-rst}
-.. autofunction:: noxfile.check_if_commited
-```
 
-## Comment Afficher un graph mermaid
 
-```{code-block} markdown
-\```{mermaid}
-graph TD
-    A[Enter Chart Definition] --> B(Preview)
-    B --> C{decide}
-    C --> D[Keep]
-    C --> E[Edit Definition]
-    E --> B
-    D --> F[Save Image and Code]
-    F --> B
-\```
-```
-
-```{mermaid}
-graph TD
-    A[Enter Chart Definition] --> B(Preview)
-    B --> C{decide}
-    C --> D[Keep]
-    C --> E[Edit Definition]
-    E --> B
-    D --> F[Save Image and Code]
-    F --> B
-``` -->

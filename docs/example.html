@@ -51,6 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Intro</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Transfer of video</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#websocket-flux">Websocket flux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#explication-of-the-code">Explication of the code</a></li>
 </ul>
 </li>
 </ul>
@@ -95,6 +96,9 @@
 <p class="admonition-title">Attention au chemin d’accès</p>
 <p>Bug during the reload of the page, the flux is not reloaded.</p>
 </div>
+</section>
+<section id="explication-of-the-code">
+<h2>Explication of the code<a class="headerlink" href="#explication-of-the-code" title="Permalink to this heading"></a></h2>
 <!-- ```{code-block} python
 def check_if_commited() -> bool:
 """returns if the current branch is commited
@@ -123,38 +127,8 @@ We can also use automodule to auto-document a file
 
 Cela permet d'afficher le contenu de la manière suivante.
 
-```{eval-rst}
-.. autofunction:: noxfile.check_if_commited
-```
 
-## Comment Afficher un graph mermaid
 
-```{code-block} markdown
-\```{mermaid}
-graph TD
-    A[Enter Chart Definition] --> B(Preview)
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>B --&gt; C{decide}
-C --&gt; D[Keep]
-C --&gt; E[Edit Definition]
-E --&gt; B
-D --&gt; F[Save Image and Code]
-F --&gt; B
-</pre></div>
-</div>
-<p>```</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-```{mermaid}
-graph TD
-    A[Enter Chart Definition] --&gt; B(Preview)
-    B --&gt; C{decide}
-    C --&gt; D[Keep]
-    C --&gt; E[Edit Definition]
-    E --&gt; B
-    D --&gt; F[Save Image and Code]
-    F --&gt; B
-``` --&gt;
-</pre></div>
-</div>
 </section>
 </section>
 
