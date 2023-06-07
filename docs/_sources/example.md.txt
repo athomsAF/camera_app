@@ -19,7 +19,7 @@ Bug during the reload of the page, the flux is not reloaded.
 ## Explication of the code
 
 ```{eval-rst}
-.. autofunction:: stream_socket_server.video_stream
+.. autofunction:: src.stream_socket_server.video_stream
 ```
 test
 
