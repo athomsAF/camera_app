@@ -1,10 +1,22 @@
-# Exemple of function with sphinx
+# Partage vidéo
 
-## Comment documenter une fonction python
+## Le protocole Websocket
+
+
+```{mermaid}
+sequenceDiagram
+
+    Client->>Serveur: Connexion
+    Caméra->>Serveur: Rééccupère le flux vidéo
+    Serveur->>Client: Envoie le flux vidéo
+    Client->>Caméra: Réccupère le flux et le renvoir sur la page
+
+```
+
 
 Pour documenter la fonction suivante dans noxfile,
 
-```{code-block} python
+<!-- ```{code-block} python
 def check_if_commited() -> bool:
 """returns if the current branch is commited
 Returns:
@@ -60,4 +72,4 @@ graph TD
     E --> B
     D --> F[Save Image and Code]
     F --> B
-```
+``` -->

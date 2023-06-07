@@ -77,6 +77,7 @@ def commit_and_push_file(branch: str, session) -> None:
         time = session.run("date", "+%Y-%m-%d-%H-%M")
         session.run("git", "push", "origin", "build")
     elif branch == "main":
+        session.run("git", "add", "sphinx")
         session.run("git", "add", "docs")
         session.run("git", "commit", "-m", "docs")
         session.run("git", "push")
@@ -180,6 +181,7 @@ def test(session: nox.Session) -> None:
 def docs(session: nox.Session) -> None:
     try:
         branch = "main"
+
         if connect_branch("main", session):
             session.install("-r", "requirements/docs-requirements.txt")
             # nb_elements_in_source = os.listdir("./doc/source")
@@ -202,7 +204,6 @@ def docs(session: nox.Session) -> None:
             # except:
             #     print("branch does not exist in github")
             # recreate branch
-            connect_branch(branch, session)
             # session.run("git", "update-index", "--assume-unchanged", ".env") #don t update .env
             session.run("sphinx-build", "-b", "html", "./sphinx/source", "./docs")
             session.run("touch", "docs/.nojekyll")
