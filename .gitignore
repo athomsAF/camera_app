@@ -1,4 +1,4 @@
 .nox
 __pycache__
 docs_information
-deoc/build
+noxfile.py
