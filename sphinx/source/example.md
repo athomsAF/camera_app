@@ -1,20 +1,20 @@
-# Partage vidéo
+# Transfer of video
 
-## Le protocole Websocket
-
+## Websocket flux
 
 ```{mermaid}
 sequenceDiagram
 
-    Client->>Serveur: Connexion
-    Caméra->>Serveur: Rééccupère le flux vidéo
-    Serveur->>Client: Envoie le flux vidéo
-    Client->>Client: Réccupère le flux et le renvoir sur la page
+    Client->>Server: Connexion request
+    Caamera->>Server: Get the flux of images
+    Server->>Client: Send all image one by one (like mjpeg)
+    Client->>Client: Display flux
 
 ```
-
-
-Pour documenter la fonction suivante dans noxfile,
+:::{admonition} Attention au chemin d'accès
+:class: attention
+Bug during the reload of the page, the flux is not reloaded.
+:::
 
 <!-- ```{code-block} python
 def check_if_commited() -> bool:

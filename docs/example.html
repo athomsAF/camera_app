@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Partage vidéo &mdash; Python  documentation</title>
+  <title>Transfer of video &mdash; Python  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -49,8 +49,8 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Intro</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Partage vidéo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#le-protocole-websocket">Le protocole Websocket</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Transfer of video</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#websocket-flux">Websocket flux</a></li>
 </ul>
 </li>
 </ul>
@@ -69,7 +69,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Partage vidéo</li>
+      <li class="breadcrumb-item active">Transfer of video</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/example.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -79,19 +79,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="partage-video">
-<h1>Partage vidéo<a class="headerlink" href="#partage-video" title="Permalink to this heading"></a></h1>
-<section id="le-protocole-websocket">
-<h2>Le protocole Websocket<a class="headerlink" href="#le-protocole-websocket" title="Permalink to this heading"></a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="transfer-of-video">
+<h1>Transfer of video<a class="headerlink" href="#transfer-of-video" title="Permalink to this heading"></a></h1>
+<section id="websocket-flux">
+<h2>Websocket flux<a class="headerlink" href="#websocket-flux" title="Permalink to this heading"></a></h2>
 <div class="mermaid">
             sequenceDiagram
 
-    Client-&gt;&gt;Serveur: Connexion
-    Caméra-&gt;&gt;Serveur: Rééccupère le flux vidéo
-    Serveur-&gt;&gt;Client: Envoie le flux vidéo
-    Client-&gt;&gt;Client: Réccupère le flux et le renvoir sur la page
+    Client-&gt;&gt;Server: Connexion request
+    Caamera-&gt;&gt;Server: Get the flux of images
+    Server-&gt;&gt;Client: Send all image one by one (like mjpeg)
+    Client-&gt;&gt;Client: Display flux
 
-        </div><p>Pour documenter la fonction suivante dans noxfile,</p>
+        </div><div class="attention admonition">
+<p class="admonition-title">Attention au chemin d’accès</p>
+<p>Bug during the reload of the page, the flux is not reloaded.</p>
+</div>
 <!-- ```{code-block} python
 def check_if_commited() -> bool:
 """returns if the current branch is commited
