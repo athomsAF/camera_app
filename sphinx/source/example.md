@@ -21,6 +21,8 @@ Bug during the reload of the page, the flux is not reloaded.
 ```{eval-rst}
 .. autofunction:: stream_socket_server.video_stream
 ```
+test
+
 
 <!-- ```{code-block} python
 def check_if_commited() -> bool:
